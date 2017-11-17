@@ -9,7 +9,7 @@ Make sure you have \`go\` to run the application. If you don't, you can download
     https://github.com/moovweb/gvm
 
 
-Do this if you didn't clone to your $GOPATH/src/ diretory (Linux/Mac only)
+Do this if you didn't clone to $GOPATH/src/github.com/PauloLeal diretory (Linux/Mac only)
      
      ./createLinkToGOPATH.sh #creates a symlink to project
 
@@ -32,6 +32,6 @@ You can also download using go get
 
 Then run from your command line
 
-    english-name-to-klingon
+    english-name-to-klingon <some_character_name>
 
 
