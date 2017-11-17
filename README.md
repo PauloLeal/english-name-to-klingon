@@ -4,7 +4,7 @@ This application translates an english name to klingon using hexadecimal numbers
 
 It also uses stapi.co to define the race of named character
 
-Make sure you have \`go\` to run the game. If you don't, you can download from 
+Make sure you have \`go\` to run the application. If you don't, you can download from 
 
     https://github.com/moovweb/gvm
 
