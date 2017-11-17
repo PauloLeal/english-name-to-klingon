@@ -27,3 +27,23 @@ func auxTestGetCharacterUid(query string, expectedUid string, hasError bool) fun
 	}
 }
 
+func TestGetCharacterSpecieByUid(t *testing.T) {
+	t.Run("Nyota Uhura", auxTestGetCharacterSpecieByUid("CHMA0000068639", "Human"))
+	t.Run("Khan", auxTestGetCharacterSpecieByUid("CHMA0000084420", "Human"))
+	t.Run("Jim", auxTestGetCharacterSpecieByUid("CHMA0000009602", "Human"))
+	t.Run("Spock", auxTestGetCharacterSpecieByUid("CHMA0000115358", "Human / Vulcan"))
+	t.Run("INVALID_", auxTestGetCharacterSpecieByUid("invalid_", "Unknown"))
+}
+
+func auxTestGetCharacterSpecieByUid(uid string, expectedSpecie string) func(*testing.T) {
+	return func(t *testing.T) {
+		race, err := getCharacterSpecieByUid(uid)
+
+		if err != nil {
+			t.Error(fmt.Sprintf("Expected getCharacterSpecieByUid(%s) to be successful but got an error. %s", uid, err))
+		} else if race != expectedSpecie {
+			t.Error(fmt.Sprintf("Expected race of %s to be %s. Found %s", uid, expectedSpecie, race))
+		}
+	}
+}
+
