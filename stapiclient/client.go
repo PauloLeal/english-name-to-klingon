@@ -34,7 +34,7 @@ func getCharacterUid(characterName string) (string, error) {
 	searchURL := fmt.Sprintf("%s/character/search", baseURL)
 
 	form := url.Values{}
-	form.Add("name", characterName)
+	form.Add("name", strings.Title(characterName))
 
 	req, err := http.NewRequest("POST", searchURL, strings.NewReader(form.Encode()))
 	if err != nil {
@@ -76,7 +76,7 @@ func getCharacterSpecieByUid(uid string) (string, error) {
 	s := make([]string, len(result.Character.CharacterSpecies))
 
 	for i, r := range result.Character.CharacterSpecies {
-		s[i] = r.Name
+		s[i] = strings.Title(r.Name)
 	}
 
 	if len(s) > 0 {
@@ -87,5 +87,15 @@ func getCharacterSpecieByUid(uid string) (string, error) {
 }
 
 func GetCharacterSpecie(characterName string) string {
-	return "Dummy"
+	uid, err := getCharacterUid(characterName)
+	if err != nil {
+		return "Unknown"
+	}
+
+	specie, err := getCharacterSpecieByUid(uid)
+	if err != nil {
+		return "Unknown"
+	}
+
+	return strings.Title(specie)
 }
