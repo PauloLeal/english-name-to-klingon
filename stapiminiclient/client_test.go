@@ -1,4 +1,4 @@
-package stapiclient
+package stapiminiclient
 
 import (
 	"testing"

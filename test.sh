@@ -8,6 +8,6 @@ cover () {
     unlink $t
 }
 
-cover github.com/PauloLeal/english-name-to-klingon/stapiclient
+cover github.com/PauloLeal/english-name-to-klingon/stapiminiclient
 cover github.com/PauloLeal/english-name-to-klingon/
 
