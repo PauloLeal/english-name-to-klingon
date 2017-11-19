@@ -2,7 +2,7 @@
 
 This application translates an english name to klingon's pIqaD alphabet unicode points.
 
-It also uses [http://stapi.co]() to define the specie of named character. It'll say `Unknown` if it can't determine the specie for any reason.
+It also uses [http://stapi.co](http://stapi.co) to define the specie of named character. It'll say `Unknown` if it can't determine the specie for any reason.
 
 #### The translation was done using these tables
 
@@ -52,7 +52,7 @@ Unknown
 
 Make sure you have \`go\` to run the application. If you don't, you can download from 
 
-[https://golang.org/dl/]() or [https://github.com/moovweb/gvm]()
+[https://golang.org/dl/](https://golang.org/dl/) or [https://github.com/moovweb/gvm](https://github.com/moovweb/gvm)
 
 If you didn't clone to ```$GOPATH/src/``` do this to create a symbolic link in ```$GOPATH/src/github.com/PauloLeal``` diretory (Linux/Mac only)
      
