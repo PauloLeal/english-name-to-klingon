@@ -6,10 +6,8 @@ import (
 )
 
 func TestGetCharacterUid(t *testing.T) {
-	t.Run("Nyota Uhura", auxTestGetCharacterUid("uhura", "CHMA0000068639", false))
-	t.Run("Khan", auxTestGetCharacterUid("khan", "CHMA0000084420", false))
+	t.Run("Uhura", auxTestGetCharacterUid("uhura", "CHMA0000068639", false))
 	t.Run("Jim", auxTestGetCharacterUid("jim", "CHMA0000009602", false))
-	t.Run("Spock", auxTestGetCharacterUid("spock", "CHMA0000009075", false))
 	t.Run("INVALID_", auxTestGetCharacterUid("invalid_", "", true))
 }
 
@@ -28,10 +26,8 @@ func auxTestGetCharacterUid(query string, expectedUid string, hasError bool) fun
 }
 
 func TestGetCharacterSpecieByUid(t *testing.T) {
-	t.Run("Nyota Uhura", auxTestGetCharacterSpecieByUid("CHMA0000068639", "Human"))
-	t.Run("Khan", auxTestGetCharacterSpecieByUid("CHMA0000084420", "Human"))
+	t.Run("Uhura", auxTestGetCharacterSpecieByUid("CHMA0000068639", "Human"))
 	t.Run("Jim", auxTestGetCharacterSpecieByUid("CHMA0000009602", "Human"))
-	t.Run("Spock", auxTestGetCharacterSpecieByUid("CHMA0000115358", "Human / Vulcan"))
 	t.Run("B'Etor", auxTestGetCharacterSpecieByUid("CHMA0000003645", "Klingon"))
 	t.Run("INVALID_", auxTestGetCharacterSpecieByUid("invalid_", "Unknown"))
 }

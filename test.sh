@@ -9,5 +9,5 @@ cover () {
 }
 
 cover github.com/PauloLeal/english-name-to-klingon/stapiminiclient
-cover github.com/PauloLeal/english-name-to-klingon/
+cover github.com/PauloLeal/english-name-to-klingon/translator
 
