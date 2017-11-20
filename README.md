@@ -43,7 +43,7 @@ Unknown
 ```
 
 ```bash
-$ ./english-name-to-klingon bad name
+$ ./english-name-to-klingon "bad name"
 0xF8D1 0xF8D0 0xF8D3 0x0020 0xF8DB 0xF8D0 0xF8DA 0xF8D4
 Unknown
 ```
